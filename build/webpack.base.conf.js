@@ -24,7 +24,7 @@ const webpackBaseConfig = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json', '.less'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -81,4 +81,4 @@ const webpackBaseConfig = {
     child_process: 'empty'
   }
 }
-module.exports = vuxLoader.merge(webpackBaseConfig, ['vux-ui'])
+module.exports = vuxLoader.merge(webpackBaseConfig, {plugins: ['vux-ui']})

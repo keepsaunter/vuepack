@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <x-button type='warn'>test</x-button>
     <router-view/>
   </div>
 </template>

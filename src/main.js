@@ -4,9 +4,6 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
-// import vux from 'vux';
-// Vue.use(Vux);
-
 import { XButton } from 'vux'
 
 Vue.component('x-button', XButton)
