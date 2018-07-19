@@ -90,6 +90,11 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created() {
+    this.$store.dispatch('getdataTest').then(res => {
+      console.log(res);
+    })
   }
 }
 </script>
