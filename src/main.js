@@ -3,17 +3,17 @@ import store from './vuex/store';
 import App from './App';
 import router from './router';
 
-import { XButton } from 'vux'
+import { XButton } from 'vux';
 
-Vue.component('x-button', XButton)
+Vue.component('x-button', XButton);
 
-Vue.config.productionTip = false
-
+Vue.config.productionTip = false;
+/* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  store,
-  router,
-  render(h){
+	el: '#app',
+	store,
+	router,
+	render (h) {
 		return h(App);
 	}
-})
+});
