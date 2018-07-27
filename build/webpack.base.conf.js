@@ -9,7 +9,16 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-
+const createLintingRule = () => ({
+  test: /\.(js|vue)$/,
+  loader: 'eslint-loader',
+  enforce: 'pre',
+  include: [resolve('src'), resolve('test')],
+  options: {
+    formatter: require('eslint-friendly-formatter'),
+    emitWarning: !config.dev.showEslintErrorsInOverlay
+  }
+})
 
 const webpackBaseConfig = {
   context: path.resolve(__dirname, '../'),
@@ -24,7 +33,7 @@ const webpackBaseConfig = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.less'],
+    extensions: ['.js', '.vue', '.json', 'less'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -32,6 +41,7 @@ const webpackBaseConfig = {
   },
   module: {
     rules: [
+      ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',

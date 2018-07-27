@@ -1,4 +1,4 @@
-<style scoped>
+<style scoped lang='scss'>
   h1, h2 {
     font-weight: normal;
   }
@@ -109,7 +109,7 @@ export default {
   },
   created () {
     this.$store.dispatch('getdataTest').then(res => {
-      console.log(res);
+      // console.log(res);
     })
   }
 }

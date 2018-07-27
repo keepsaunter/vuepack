@@ -7,7 +7,7 @@ import { XButton } from 'vux';
 
 Vue.component('x-button', XButton);
 
-Vue.config.productionTip = false;
+// Vue.config.productionTip = false;
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',
