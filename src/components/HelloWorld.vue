@@ -108,9 +108,9 @@ export default {
     };
   },
   created () {
-    this.$store.dispatch('getdataTest').then(res => {
+    // this.$store.dispatch('getdataTest').then(res => {
       // console.log(res);
-    })
+    // })
   }
 }
 </script>
