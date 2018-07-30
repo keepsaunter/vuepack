@@ -16,6 +16,7 @@
 </style>
 <template>
   <div class="hello">
+    <md-button class="md-raised md-warn">暖色</md-button>
     <h1 @click="titleClick">{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
